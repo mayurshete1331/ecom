@@ -139,7 +139,7 @@ export default function OrderTrackingModal() {
             </div>
             <p style={{ fontSize: '11px', color: 'rgba(255, 255, 255, 0.85)', marginTop: '2px' }}>
               {isWholesale 
-                ? 'Produce is reserved from today’s fresh harvest at Pune Dark Store.'
+                ? 'Produce is reserved from today’s fresh harvest at Pune Dispatch Hub.'
                 : 'Driver is picking up your graded produce from Baner Hub.'}
             </p>
           </div>
@@ -372,7 +372,7 @@ export default function OrderTrackingModal() {
                     Order Placed via Cash on Delivery
                   </div>
                   <div style={{ fontSize: '10px', color: '#64748b' }}>
-                    Order received & recorded in database
+                    Order received and confirmed
                   </div>
                 </div>
               </div>

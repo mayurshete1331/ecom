@@ -115,7 +115,7 @@ export default function AdminLoginPage() {
             Store Operations Hub
           </h1>
           <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>
-            Central Dark Store & Inventory Control System
+            Farm Produce & Store Operations Portal
           </p>
         </div>
 
@@ -249,7 +249,7 @@ export default function AdminLoginPage() {
         </div>
 
         <div style={{ marginTop: '14px', textAlign: 'center', fontSize: '11px', color: '#64748b' }}>
-          Authorized Personnel Only • IP Address Logged
+          Authorized Personnel Only • Secure Portal
         </div>
       </div>
     </div>

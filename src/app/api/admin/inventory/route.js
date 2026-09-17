@@ -141,7 +141,7 @@ export async function PATCH(request) {
 
     return NextResponse.json({
       success: true,
-      message: 'Inventory tier updated successfully in MySQL'
+      message: 'Inventory tier updated successfully'
     });
   } catch (error) {
     console.error('Admin inventory update error:', error);

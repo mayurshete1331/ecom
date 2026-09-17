@@ -210,7 +210,7 @@ export default function AdminPage() {
       });
       const data = await res.json();
       if (data.success) {
-        setSuccessMsg(`Product "${newProdName}" added to live database!`);
+        setSuccessMsg(`Product "${newProdName}" added successfully!`);
         // Reset form
         setNewProdName('');
         setNewProdDesc('');
@@ -304,7 +304,7 @@ export default function AdminPage() {
               )}
             </div>
             <p style={{ fontSize: '11px', color: '#94a3b8', margin: 0 }}>
-              Independent Farm Hub • Inventory, Dispatch & Pricing Scoped
+              Farm Hub • Live Inventory & Dispatch Control
             </p>
           </div>
         </div>
@@ -765,7 +765,7 @@ export default function AdminPage() {
                 textAlign: 'center',
                 color: '#64748b'
               }}>
-                No orders in the database yet.
+                No orders received yet.
               </div>
             ) : (
               orders.map((ord) => (
@@ -1169,7 +1169,7 @@ export default function AdminPage() {
             boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
           }}>
             <h2 style={{ fontSize: '17px', fontWeight: '800', marginBottom: '6px' }}>
-              Add New Produce to MySQL
+              Add New Produce
             </h2>
             <p style={{ fontSize: '12px', color: '#64748b', marginBottom: '18px' }}>
               Specify produce details, retail pack pricing, and wholesale bulk crate rates.
@@ -1388,7 +1388,7 @@ export default function AdminPage() {
                 className="btn-primary"
                 style={{ width: '100%', padding: '12px', marginTop: '6px' }}
               >
-                {loading ? 'Saving to Database...' : 'Add Produce to MySQL Catalog'}
+                {loading ? 'Saving...' : 'Add Produce to Catalog'}
               </button>
             </form>
           </div>

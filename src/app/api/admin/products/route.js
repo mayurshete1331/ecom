@@ -73,7 +73,7 @@ export async function POST(request) {
 
       return NextResponse.json({
         success: true,
-        message: 'Product added successfully to database',
+        message: 'Product added successfully',
         product_id: productId
       });
     } catch (err) {

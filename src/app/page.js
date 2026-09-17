@@ -73,11 +73,11 @@ export default function HomePage() {
       if (data.success && data.products) {
         setProducts(data.products);
       } else {
-        setError(data.error || 'Failed to query products from database');
+        setError(data.error || 'Unable to load products. Please refresh.');
       }
     } catch (err) {
       console.error('Products load error:', err);
-      setError(err.message || 'Database connection error');
+      setError('Connection issue. Please check your network and try again.');
     } finally {
       setLoading(false);
     }
@@ -281,7 +281,7 @@ export default function HomePage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                   <RefreshCw size={14} className="animate-spin" />
-                  <span>Loading MySQL data...</span>
+                  <span>Loading fresh produce...</span>
                 </div>
               </div>
             ))}
@@ -297,7 +297,7 @@ export default function HomePage() {
           }}>
             <AlertTriangle size={24} style={{ margin: '0 auto 8px' }} />
             <h4 style={{ fontSize: '14px', fontWeight: '700', marginBottom: '4px' }}>
-              Database Connection Notice
+              Unable to Load Produce
             </h4>
             <p style={{ fontSize: '12px', marginBottom: '12px' }}>{error}</p>
             <button
@@ -305,7 +305,7 @@ export default function HomePage() {
               className="btn-secondary"
               style={{ fontSize: '12px', padding: '6px 14px' }}
             >
-              Retry Query
+              Try Again
             </button>
           </div>
         ) : products.length === 0 ? (
