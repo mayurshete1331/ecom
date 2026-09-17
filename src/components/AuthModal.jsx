@@ -10,10 +10,7 @@ import {
   Building2, 
   FileText, 
   MapPin, 
-  Sparkles,
-  CheckCircle2,
-  Store,
-  Shield
+  CheckCircle2
 } from 'lucide-react';
 
 export default function AuthModal() {
@@ -70,24 +67,6 @@ export default function AuthModal() {
     }
   };
 
-  const handleQuickDemo = async (role) => {
-    setErrorMsg('');
-    setLoading(true);
-    try {
-      if (role === 'RETAIL') {
-        await login('9876543210', 'password123');
-      } else if (role === 'WHOLESALE') {
-        await login('9123456780', 'password123');
-      } else if (role === 'ADMIN') {
-        await login('9999999999', 'admin123');
-      }
-    } catch (err) {
-      setErrorMsg(err.message || 'Demo login failed');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div className="drawer-backdrop" onClick={closeAuth}>
       <div 
@@ -132,96 +111,6 @@ export default function AuthModal() {
           >
             <X size={16} />
           </button>
-        </div>
-
-        {/* Quick Demo Login Bar for Testing */}
-        <div style={{
-          backgroundColor: '#f8fafc',
-          border: '1px solid #e2e8f0',
-          borderRadius: '12px',
-          padding: '10px 12px',
-          marginBottom: '16px'
-        }}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '4px',
-            fontSize: '11px',
-            fontWeight: '700',
-            color: '#64748b',
-            marginBottom: '8px'
-          }}>
-            <Sparkles size={12} color="#f59e0b" />
-            <span>Instant Demo Accounts (One-Tap Login):</span>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px' }}>
-            <button
-              type="button"
-              onClick={() => handleQuickDemo('RETAIL')}
-              disabled={loading}
-              style={{
-                backgroundColor: '#ffffff',
-                border: '1px solid #059669',
-                color: '#047857',
-                borderRadius: '8px',
-                padding: '6px 4px',
-                fontSize: '10px',
-                fontWeight: '700',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '3px'
-              }}
-            >
-              <Store size={11} />
-              <span>Retail</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleQuickDemo('WHOLESALE')}
-              disabled={loading}
-              style={{
-                backgroundColor: '#0f172a',
-                border: '1px solid #0f172a',
-                color: '#fbbf24',
-                borderRadius: '8px',
-                padding: '6px 4px',
-                fontSize: '10px',
-                fontWeight: '700',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '3px'
-              }}
-            >
-              <Building2 size={11} />
-              <span>Hotel</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleQuickDemo('ADMIN')}
-              disabled={loading}
-              style={{
-                backgroundColor: '#047857',
-                border: '1px solid #047857',
-                color: '#ffffff',
-                borderRadius: '8px',
-                padding: '6px 4px',
-                fontSize: '10px',
-                fontWeight: '700',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '3px'
-              }}
-            >
-              <Shield size={11} />
-              <span>Admin</span>
-            </button>
-          </div>
         </div>
 
         {/* Tab Selector: Login vs Register */}

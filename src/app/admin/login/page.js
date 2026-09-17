@@ -9,10 +9,7 @@ import {
   Phone, 
   ArrowRight, 
   ArrowLeft, 
-  AlertCircle, 
-  Sparkles,
-  Store,
-  CheckCircle2
+  AlertCircle
 } from 'lucide-react';
 
 export default function AdminLoginPage() {
@@ -54,18 +51,6 @@ export default function AdminLoginPage() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const fillDemoAdmin1 = () => {
-    setPhone('9999999999');
-    setPassword('admin123');
-    setErrorMsg('');
-  };
-
-  const fillDemoAdmin2 = () => {
-    setPhone('8888888888');
-    setPassword('admin123');
-    setErrorMsg('');
   };
 
   return (
@@ -132,87 +117,6 @@ export default function AdminLoginPage() {
           <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>
             Central Dark Store & Inventory Control System
           </p>
-        </div>
-
-        {/* Multi-Store Demo Quick Logins */}
-        <div style={{
-          backgroundColor: '#1f2937',
-          border: '1px solid #374151',
-          borderRadius: '12px',
-          padding: '12px',
-          marginBottom: '20px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '8px'
-        }}>
-          <div style={{ fontSize: '11px', fontWeight: '700', color: '#fbbf24', display: 'flex', alignItems: 'center', gap: '4px' }}>
-            <Sparkles size={13} />
-            <span>Test Multi-Admin Accounts:</span>
-          </div>
-
-          {/* Store 1 */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            backgroundColor: '#111827',
-            padding: '6px 10px',
-            borderRadius: '8px',
-            border: '1px solid #2d3748'
-          }}>
-            <div>
-              <div style={{ fontSize: '11px', fontWeight: '700', color: '#10b981' }}>Store 1: KisanDirect Central Farm</div>
-              <div style={{ fontSize: '10px', color: '#94a3b8' }}>Phone: <code>9999999999</code></div>
-            </div>
-            <button
-              type="button"
-              onClick={fillDemoAdmin1}
-              style={{
-                backgroundColor: '#059669',
-                color: '#ffffff',
-                border: 'none',
-                borderRadius: '6px',
-                padding: '4px 8px',
-                fontSize: '11px',
-                fontWeight: '700',
-                cursor: 'pointer'
-              }}
-            >
-              Fill
-            </button>
-          </div>
-
-          {/* Store 2 */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            backgroundColor: '#111827',
-            padding: '6px 10px',
-            borderRadius: '8px',
-            border: '1px solid #2d3748'
-          }}>
-            <div>
-              <div style={{ fontSize: '11px', fontWeight: '700', color: '#38bdf8' }}>Store 2: Brothers Green Harvest</div>
-              <div style={{ fontSize: '10px', color: '#94a3b8' }}>Phone: <code>8888888888</code></div>
-            </div>
-            <button
-              type="button"
-              onClick={fillDemoAdmin2}
-              style={{
-                backgroundColor: '#0284c7',
-                color: '#ffffff',
-                border: 'none',
-                borderRadius: '6px',
-                padding: '4px 8px',
-                fontSize: '11px',
-                fontWeight: '700',
-                cursor: 'pointer'
-              }}
-            >
-              Fill
-            </button>
-          </div>
         </div>
 
         {/* Error Notification */}
